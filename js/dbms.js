@@ -37,16 +37,21 @@ dbms = {
     return typeof($.inArray(table_name, this.table_names)) === "number";
   },
   
-  find: function(table_name, id) {
+  find: function(table_name, value, column) {
+    column = typeof(column) !== "undefined" ? column : "id";
     if (this.tableExists(table_name)) {
-      var record;
+      var record = false;
       $.each(this.data[table_name], function(index, item) {
-        if (item.id == id) {
+        if (item[column] == value) {
           record = item;
           return false;
         };
       });
-      return record;
+      if (record) {
+        return record;
+      } else {
+        return null;
+      };
     } else {
       return null;
     };
