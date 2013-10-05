@@ -1,0 +1,15 @@
+module "static"
+
+match / {
+  <div class="page__title">{ .title }</div>
+  <div class="page__text">{ html(.text) }</div>
+  if .subsections_title {
+    <div class="page__title">{ .subsections_title }</div>
+  }
+  for .subsections {
+    <div class="page__subsection">
+      <div class="page__subsection__title">{ .title }</div>
+      <div class="page__subsection__text">{ html(.text) }</div>
+    </div>
+  }
+}

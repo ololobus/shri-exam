@@ -14,6 +14,16 @@ body{
   background-size:16px 16px;
 }
 
+.link{
+  color:#007aff;
+}
+.link:visited{
+  color:#007aff;
+}
+.link:hover{
+  color:#ff9500;
+}
+
 .white-substrate{
   z-index:1;
   background-color:white;
@@ -76,7 +86,7 @@ body{
   color:#4cd964;
   font-size:18px;
   right:5px;
-  top:12px;
+  top:17px;
 }
 .theses__thesis_2{
   color:red;
@@ -96,6 +106,7 @@ body{
   top:70px;
 }
 .theses__thesis_5{
+  top:7px;
   left:10px;
   font-size:18px;
 }
@@ -142,6 +153,17 @@ body{
   width:730px;
   border-top:1px solid #c8c7cc;
 }
-.page__list{
-  
+.page__title{
+  font-size:22px;
+  padding:20px 0px 10px 0px;
+}
+.page__text{
+  font-size:14px;
+}
+.page__subsection__title{
+  font-size:16px;
+  padding:7px 0px;
+}
+.page__subsection__text{
+  font-size:14px;
 }
