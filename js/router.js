@@ -1,6 +1,7 @@
 Router = Backbone.Router.extend({
   
   routes: {
+    "":             "about",
     "about":        "about",
     "social":       "social",
     "students":     "students",
@@ -23,10 +24,12 @@ Router = Backbone.Router.extend({
   
   students: function() {
     this.setMenuCurrent("students");
+    App.StudentsView.renderStudents();
   },
   
   student: function(id) {
     this.setMenuCurrent("students");
+    App.StudentsView.renderStudent(id);
   },
   
   lectors: function() {
