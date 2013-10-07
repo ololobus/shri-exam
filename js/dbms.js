@@ -8,10 +8,13 @@ db = {
   load: function() {
     if (db_data) {
       this.name = db_data.name;
-      var local_db = localStorage.getItem(this.name);
+      if (localStorage) {
+        var local_db = localStorage.getItem(this.name);
+      };
       if (local_db) {
         this.data = JSON.parse(local_db).data;
         console.log("App data loaded from localStorage");
+        delete(db_data);
       } else {
         this.data = db_data.data;
         console.log("App data loaded from server dump");
