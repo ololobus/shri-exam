@@ -10,11 +10,11 @@ var StudentsView = Backbone.View.extend({
     
   },
 
-  renderStudents: function() {
+  renderAll: function() {
     this.$el.html(yr.run("students", { students: db.data.students }));
   },
   
-  renderStudent: function(id) {
+  renderShow: function(id) {
     var student = db.find("students", id);
     this.$el.html(yr.run("student", student));
   }

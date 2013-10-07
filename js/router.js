@@ -24,20 +24,22 @@ Router = Backbone.Router.extend({
   
   students: function() {
     this.setMenuCurrent("students");
-    App.StudentsView.renderStudents();
+    App.StudentsView.renderAll();
   },
   
   student: function(id) {
     this.setMenuCurrent("students");
-    App.StudentsView.renderStudent(id);
+    App.StudentsView.renderShow(id);
   },
   
   lectors: function() {
     this.setMenuCurrent("lectors");
+    App.LectorsView.renderAll();
   },
   
   lector: function(id) {
     this.setMenuCurrent("lectors");
+    App.LectorsView.renderShow(id);
   },
   
   lectures: function() {

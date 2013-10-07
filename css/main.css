@@ -203,7 +203,7 @@ a, a:visited, a:hover{
 }
 .people-list__member__name{
   position:absolute;
-  top:40px;
+  top:43px;
   left:115px;
   width:200px;
   height:30px;
@@ -254,4 +254,12 @@ a, a:visited, a:hover{
 }
 .member-card__about{
   font-size:14px;
+  margin-bottom:15px;
+}
+.member-card__lectures-list{
+  margin-top:5px;
+  font-size:14px;
+}
+.member-card__lectures-list__item{
+  margin-top:2px;
 }
