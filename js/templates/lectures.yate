@@ -1,0 +1,21 @@
+module "lectures"
+
+match / {
+  <div class="page__title">Лекции</div>
+  <div class="lectures-list">
+    for .lectures {
+      <div class="lectures-list__lecture">
+        <div class="lectures-list__lecture__marker"></div>
+        <div class="lectures-list__lecture__name">
+          <a href="#/lectures/{ .id }" class="link">{ .name }</a>
+        </div>
+        <div class="lectures-list__lecture__lector">
+          <a href="#/lectors/{ .lector.id }" class="lectures-list__lecture__lector__link">
+            <span class="red">{ .lector.name.first_char }</span>
+            "{ .lector.name.last_chars }"
+          </a>
+        </div>
+      </div>
+    }
+  </div>
+}

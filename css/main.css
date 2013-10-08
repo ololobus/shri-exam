@@ -4,6 +4,7 @@
   font-family:"Helvetica", "Arial";
 }
 
+
 body{
   background:
   radial-gradient(black 15%, transparent 16%) 0 0,
@@ -14,10 +15,12 @@ body{
   background-size:16px 16px;
 }
 
+
 a, a:visited, a:hover{
   color:black;
   text-decoration:none;
 }
+
 
 .link{
   color:#007aff;
@@ -27,7 +30,14 @@ a, a:visited, a:hover{
 }
 .link:hover{
   color:#ff9500;
+  text-decoration:underline;
 }
+
+
+.red{
+  color:red;
+}
+
 
 .white-substrate{
   z-index:1;
@@ -41,6 +51,7 @@ a, a:visited, a:hover{
   box-shadow: 0 0 30px rgba(0,0,0,0.7);
 }
 
+
 .container{
   z-index:2;
   position:relative;
@@ -51,6 +62,7 @@ a, a:visited, a:hover{
 .container__row{
   position:relative;
 }
+
 
 .main-title{
   padding:15px 0px;
@@ -128,6 +140,7 @@ a, a:visited, a:hover{
   font-size:17px;
 }
 
+
 .menu{
   position:absolute;
   left:0px;
@@ -153,9 +166,10 @@ a, a:visited, a:hover{
   background-color:#007aff;
 }
 
+
 .page{
   margin-left:200px;
-  padding:0px 15px 30px 15px;
+  padding:0px 15px 30px 10px;
   width:730px;
   border-top:1px solid #c8c7cc;
 }
@@ -173,6 +187,7 @@ a, a:visited, a:hover{
 .page__subsection__text{
   font-size:14px;
 }
+
 
 .people-list{
   margin-top:10px;
@@ -209,6 +224,7 @@ a, a:visited, a:hover{
   height:30px;
 }
 
+
 .social-icon{
   display:inline-block;
   width:44px;
@@ -228,6 +244,7 @@ a, a:visited, a:hover{
 .social-icon_set_vk{
   background-position: -132px 0px;
 }
+
 
 .member-card{
   position:relative;
@@ -262,4 +279,46 @@ a, a:visited, a:hover{
 }
 .member-card__lectures-list__item{
   margin-top:2px;
+}
+
+
+.lectures-list{}
+.lectures-list__lecture{
+  margin:7px 0px;
+}
+.lectures-list__lecture__marker{
+  float:left;
+  width:0px;
+  height:0px;
+  border:10px solid #c8c7cc;
+  border-radius:50%;
+  margin:2px 5px 5px 5px;
+}
+.lectures-list__lecture__name{
+  font-size:16px;
+}
+.lectures-list__lecture__lector{
+  font-size:14px;
+  margin-top:3px;
+}
+.lectures-list__lecture__lector__link:hover{
+  text-decoration:underline;
+}
+
+
+.lecture{
+  position:relative;
+}
+.lecture__name{
+  font-size:22px;
+  margin:10px 0px;
+}
+.lecture__lector__name{
+  margin-bottom:3px;
+}
+.lecture__lector__avatar__photo{
+  width:250px;
+}
+.lecture__video, .lecture__slides{
+  margin-top:10px;
 }

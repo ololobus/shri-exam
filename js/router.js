@@ -44,10 +44,12 @@ Router = Backbone.Router.extend({
   
   lectures: function() {
     this.setMenuCurrent("lectures");
+    App.LecturesView.renderAll();
   },
   
   lecture: function(id) {
     this.setMenuCurrent("lectures");
+    App.LecturesView.renderShow(id);
   },
   
   setMenuCurrent: function(current) {
