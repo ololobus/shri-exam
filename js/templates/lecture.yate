@@ -1,0 +1,21 @@
+module "lecture"
+
+match / {
+  <div class="lecture">
+    <div class="lecture__name">{ .lecture.name }</div>
+    <div class="lecture__lector">
+      <div class="lecture__lector__name">Лектор: <a href="#/lectirs/{ .lector.id }" class="link">{ .lector.name }</a></div>
+      <div class="lecture__lector__avatar">
+        <img src="{ .lector.photo_url }" class="lecture__lector__avatar__photo" />
+      </div>
+    </div>
+    <div class="lecture__video">
+      <iframe class="player" width="750" height="250" frameborder="0" src="{ .lecture.video_url }"></iframe>
+    </div>
+    if .lecture.slides_url {
+      <div class="lecture__slides">
+        <iframe class="player" width="750" height="625" frameborder="0" src="{ .lecture.slides_url }"></iframe>
+      </div>
+    }
+  </div>
+}

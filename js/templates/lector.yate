@@ -1,0 +1,21 @@
+module "lector"
+
+match / {
+  <div class="member-card">
+    <div class="member-card__avatar">
+      <img src="{ .photo_url }" class="member-card__avatar__photo" />
+    </div>
+    <div class="member-card__name">{ .name }</div>
+    if .about != "" {
+      <div class="member-card__about">{ .about }</div>
+    }
+    <h4>Все лекции лектора на <a href="http://tech.yandex.ru" target="_blank" class="link">tech.yandex.ru</a></h4>
+    <div class="member-card__lectures-list">
+      for .all_lectures {
+        <div class="member-card__lectures-list__item">
+          <a href="http://tech.yandex.ru{ .url }" target="_blanc" class="link">{ .name }</a>
+        </div>
+      }
+    </div>
+  </div>
+}

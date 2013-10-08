@@ -1,0 +1,17 @@
+module "lectors"
+
+match / {
+  <div class="page__title">Лекторы</div>
+  <div class="people-list">
+    for .lectors {
+      <div class="people-list__member">
+        <a href="#/lectors/{ .id }">
+          <div class="people-list__member__avatar">
+            <img class="people-list__member__avatar__photo" src="{ .photo_url }" />
+          </div>
+          <div class="people-list__member__name">{ .name }</div>
+        </a>
+      </div>
+    }
+  </div>
+}

@@ -1,4 +1,4 @@
-dbms = {
+db = {
   
   name: null,
   data: null,
@@ -6,14 +6,17 @@ dbms = {
   no_data: true,
   
   load: function() {
-    if (database) {
-      this.name = database.name;
-      var local_db = localStorage.getItem(this.name);
+    if (db_data) {
+      this.name = db_data.name;
+      if (localStorage) {
+        var local_db = localStorage.getItem(this.name);
+      };
       if (local_db) {
         this.data = JSON.parse(local_db).data;
         console.log("App data loaded from localStorage");
+        delete(db_data);
       } else {
-        this.data = database.data;
+        this.data = db_data.data;
         console.log("App data loaded from server dump");
       };
       this.no_data = false;
