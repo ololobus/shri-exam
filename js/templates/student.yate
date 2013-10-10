@@ -1,0 +1,33 @@
+module "student"
+
+match / {
+  <div class="member-card">
+    <div class="member-card__avatar">
+      <img src="{ .link_photo }" class="member-card__avatar__photo" />
+    </div>
+    <div class="member-card__name">{ .first_name } { .last_name }</div>
+    <div class="member-card__social-links">
+      if .link_gihub != "" {
+        <a href="{ .link_gihub }" class="member-card__social-links__link" target="_blank">
+          <div class="social-icon social-icon_set_github"></div>
+        </a>
+      }
+      if .link_vk != "" {
+        <a href="{ .link_vk }" class="member-card__social-links__link" target="_blank">
+          <div class="social-icon social-icon_set_vk"></div>
+        </a>
+      }
+      if .link_facebook != "" {
+        <a href="{ .link_facebook }" class="member-card__social-links__link" target="_blank">
+          <div class="social-icon social-icon_set_facebook"></div>
+        </a>
+      }
+      if .link_yaru != "" {
+        <a href="{ .link_yaru }" class="member-card__social-links__link" target="_blank">
+          <div class="social-icon social-icon_set_yaru"></div>
+        </a>
+      }
+    </div>
+    <div class="member-card__about">{ .about }</div>
+  </div>
+}

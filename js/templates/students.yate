@@ -1,0 +1,17 @@
+module "students"
+
+match / {
+  <div class="page__title">Студенты</div>
+  <div class="people-list">
+    for .students {
+      <div class="people-list__member">
+        <a href="#/students/{ .id }">
+          <div class="people-list__member__avatar">
+            <img class="people-list__member__avatar__photo" src="{ .link_photo }" />
+          </div>
+          <div class="people-list__member__name">{ .first_name } { .last_name }</div>
+        </a>
+      </div>
+    }
+  </div>
+}
