@@ -4,7 +4,7 @@ match / {
   <div class="lecture">
     <div class="lecture__name">{ .lecture.name }</div>
     <div class="lecture__lector">
-      <div class="lecture__lector__name">Лектор: <a href="#/lectirs/{ .lector.id }" class="link">{ .lector.name }</a></div>
+      <div class="lecture__lector__name">Лектор: <a href="#/lectors/{ .lector.id }" class="link">{ .lector.name }</a></div>
       <div class="lecture__lector__avatar">
         <img src="{ .lector.photo_url }" class="lecture__lector__avatar__photo" />
       </div>

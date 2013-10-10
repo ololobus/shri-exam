@@ -41,7 +41,7 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<div class=\"" + "lecture" + "\">";
         r0 += "<div class=\"" + "lecture__name" + "\">" + nodeset2xml( ( m.s(j1, c0) ) ) + "</div>";
         r0 += "<div class=\"" + "lecture__lector" + "\">";
-        r0 += "<div class=\"" + "lecture__lector__name" + "\">" + "Лектор: " + "<a href=\"" + "#/lectirs/" + nodeset2attrvalue( ( m.s(j2, c0) ) ) + "\" class=\"" + "link" + "\">" + nodeset2xml( ( m.s(j3, c0) ) ) + "</a></div>";
+        r0 += "<div class=\"" + "lecture__lector__name" + "\">" + "Лектор: " + "<a href=\"" + "#/lectors/" + nodeset2attrvalue( ( m.s(j2, c0) ) ) + "\" class=\"" + "link" + "\">" + nodeset2xml( ( m.s(j3, c0) ) ) + "</a></div>";
         r0 += "<div class=\"" + "lecture__lector__avatar" + "\">";
         r0 += "<img src=\"" + nodeset2attrvalue( ( m.s(j4, c0) ) ) + "\" class=\"" + "lecture__lector__avatar__photo" + "\"/>";
         r0 += "</div>";
