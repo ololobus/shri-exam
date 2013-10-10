@@ -21,6 +21,11 @@ db_data = {
       ]
     },
     
+    "social": {
+      "title": "Social",
+      "text": '<div id="vk_groups1"></div><div id="vk_groups2"></div><a class="twitter-timeline" href="https://twitter.com/search?q=%23shri" data-widget-id="388377675934334976"></a>'
+    },
+    
     "students": [ 
       { "Timestamp" : "9/29/2013 19:18:30",
         "about" : "Родился и вырос в Ярославле. В этом году окончил ЯрГУ на факультете ИВТ.\nКакое-то время писал на c++, немного участвовал в ACM.\nБольше двух лет работаю в \"Тензоре\" веб-программистом. Начинал с каких-то простых страничек ещё во времена Netscape Navigator. Когда-то писал на php, немного на java, сейчас предпочитаю node.js. По работе в основном пишу/отлаживаю клиентский javascript.",
