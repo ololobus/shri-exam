@@ -322,3 +322,15 @@ a, a:visited, a:hover{
 .lecture__video, .lecture__slides{
   margin-top:10px;
 }
+
+
+/* Social widgets */
+#vk_groups1, #vk_groups2{
+  float:left;
+}
+.twitter-timeline.twitter-timeline-rendered{
+  margin-top:15px;
+  clear:both;
+  width:100%;
+}
+/* Social widgets */
