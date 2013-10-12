@@ -3,7 +3,8 @@ var LecturesView = Backbone.View.extend({
   el: ".page",
 
   events: {
-    
+    "click .lecture__comments__write":        "toggleNewCommentForm",
+    "click .lecture__comments__new__submit":  "submitComment"
   },
 
   initialize: function() {
@@ -24,6 +25,14 @@ var LecturesView = Backbone.View.extend({
     var lecture = db.find("lectures", id);
     var lector = db.find("lectors", lecture.lector_id);
     this.$el.html(yr.run("lecture", { lecture: lecture, lector: lector }));
+  },
+  
+  toggleNewCommentForm: function() {
+    $(".lecture__comments__new").slideToggle();
+  },
+  
+  submitComment: function() {
+    
   }
 
 });
