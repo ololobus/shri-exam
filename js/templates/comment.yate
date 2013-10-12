@@ -1,0 +1,11 @@
+module "comment"
+
+match / {
+  <div class="comment">
+    <div class="comment__text">{ .text }</div>
+    <div class="comment__signature">
+      "Написал&nbsp;"
+      <span class="comment__signature__author-name">{ .author }</span>
+    </div>
+  </div>
+}

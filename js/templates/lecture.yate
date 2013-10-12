@@ -17,5 +17,27 @@ match / {
         <iframe class="player" width="750" height="625" frameborder="0" src="{ .lecture.slides_url }"></iframe>
       </div>
     }
+    <div class="lecture__comments">
+      <div class="lecture__comments__title">Комментарии</div>
+      <div href="javascript:void(0);" class="lecture__comments__write onpage-link">Написать</div>
+      <form class="lecture__comments__new form">
+        <textarea class="lecture__comments__new__text form__textarea" id="new_comment_text" name="text" rows="8" cols="100"></textarea>
+        <label class="lecture__comments__new__author-label form__label" for="new_comment_author">Ваше имя</label>
+        <input class="lecture__comments__new__author form__input-text" id="new_comment_author" name="author" type="text" size="30" />
+        <input type="hidden" id="lecture_id" name="lecture_id" value="{ .lecture.id }" />
+        <div class="lecture__comments__new__submit button">Отправить</div>
+      </form>
+      <div class="lecture__comments__container">
+        for .lecture.comments {
+          <div class="comment">
+            <div class="comment__text">{ .text }</div>
+            <div class="comment__signature">
+              "Написал&nbsp;"
+              <span class="comment__signature__author-name">{ .author }</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
   </div>
 }
