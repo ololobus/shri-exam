@@ -13,5 +13,6 @@ match / {
         </a>
       </div>
     }
+    <br style="clear:both;" />
   </div>
 }

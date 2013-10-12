@@ -1,6 +1,7 @@
 db_data = {
   
   "name": "shri2013",
+  "table_names": ["students", "lectors", "lectures", "comments"],
   "timestamp": "",
   
   "data": {
@@ -25,6 +26,8 @@ db_data = {
       "title": "Social",
       "text": '<div id="vk_groups1"></div><div id="vk_groups2"></div><a class="twitter-timeline" href="https://twitter.com/search?q=%23shri" data-widget-id="388377675934334976"></a>'
     },
+    
+    "comments": [],
     
     "students": [ 
       { "Timestamp" : "9/29/2013 19:18:30",

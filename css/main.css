@@ -34,6 +34,43 @@ a, a:visited, a:hover{
 }
 
 
+.onpage-link{
+  display:block;
+  padding:1px;
+  color:#007aff;
+  border:1px dotted #007aff;
+  border-width:0px 0px 1px 0px;
+  cursor:pointer;
+}
+.onpage-link:hover{
+  color:#ff9500;
+  border-color:#ff9500;
+}
+
+
+.button{
+  background-color:#efeff4;
+  border:0px;
+  border-radius:0px;
+  padding:15px 25px;
+  font-size:16px;
+  cursor:pointer;
+}
+.button:hover{
+  background-color:#007aff;
+  color:white;
+}
+
+
+.form{}
+.form__textarea, .form__input-text{
+  padding:7px;
+  font-size:15px;
+  outline:none;
+  border:1px solid #c8c7cc;
+}
+
+
 .red{
   color:red;
 }
@@ -208,11 +245,16 @@ a, a:visited, a:hover{
   width:100px;
   height:100px;
   overflow:hidden;
-  border-radius:50%;
+  text-align:center;
+/*  border-radius:50%;*/
   border:3px solid #efeff4;
 }
 .people-list__member__avatar__photo{
-  width:140px;
+/*  width:140px;*/
+  min-height:100px;
+  min-width:100px;
+  max-height:200px;
+  max-width:150px;
   position:relative;
   right:20px;
 }
@@ -321,6 +363,52 @@ a, a:visited, a:hover{
 }
 .lecture__video, .lecture__slides{
   margin-top:10px;
+}
+.lecture__comments{
+  margin-top:20px;
+}
+.lecture__comments__title{
+  font-size:20px;
+  margin-bottom:10px;
+}
+.lecture__comments__write{
+  width:73px;
+  margin:5px 0px;
+}
+.lecture__comments__new{
+  display:none;
+  height:215px;
+}
+.lecture__comments__new__text{
+  width:710px;
+  margin-bottom:7px;
+  resize:none;
+}
+.lecture__comments__new__author{
+  margin-left:10px;
+}
+.lecture__comments__new__submit{
+  float:right;
+  margin-right:3px;
+}
+
+
+.comment{
+  margin-top:10px;
+  border:1px dashed #c8c7cc;
+  border-width:1px 0px 0px 0px;
+  padding:10px 0px;
+}
+.comment__text{
+  overflow-x:hidden;
+}
+.comment__signature{
+  overflow-x:hidden;
+  font-size:12px;
+  margin-top:5px;
+}
+.comment__signature__author-name{
+  font-weight:bold;
 }
 
 

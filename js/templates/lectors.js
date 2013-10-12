@@ -48,6 +48,7 @@ var yr = yr || require('yate/lib/runtime.js');
             r0 += "</a>";
             r0 += "</div>";
         }
+        r0 += "<br style=\"" + "clear:both;" + "\"/>";
         r0 += "</div>";
 
         return r0;
