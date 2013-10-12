@@ -1,6 +1,6 @@
 App = {};
 $(function() {
-  db.load();
+  db.load(db_data);
   App.Router = new Router;
   App.StaticView = new StaticView;
   App.StudentsView = new StudentsView;

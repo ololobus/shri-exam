@@ -33,6 +33,14 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j6 = [ 0, 'lecture', 0, 'slides_url' ];
 
+    var j7 = [ 0, 'lecture', 0, 'id' ];
+
+    var j8 = [ 0, 'lecture', 0, 'comments' ];
+
+    var j9 = [ 0, 'text' ];
+
+    var j10 = [ 0, 'author' ];
+
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
         var r0 = '';
@@ -54,6 +62,30 @@ var yr = yr || require('yate/lib/runtime.js');
             r0 += "<iframe class=\"" + "player" + "\" width=\"" + "750" + "\" height=\"" + "625" + "\" frameborder=\"" + "0" + "\" src=\"" + nodeset2attrvalue( ( m.s(j6, c0) ) ) + "\"></iframe>";
             r0 += "</div>";
         }
+        r0 += "<div class=\"" + "lecture__comments" + "\">";
+        r0 += "<div class=\"" + "lecture__comments__title" + "\">" + "Комментарии" + "</div>";
+        r0 += "<div href=\"" + "javascript:void(0);" + "\" class=\"" + "lecture__comments__write onpage-link" + "\">" + "Написать" + "</div>";
+        r0 += "<form class=\"" + "lecture__comments__new form" + "\">";
+        r0 += "<textarea class=\"" + "lecture__comments__new__text form__textarea" + "\" id=\"" + "new_comment_text" + "\" name=\"" + "text" + "\" rows=\"" + "8" + "\" cols=\"" + "100" + "\"></textarea>";
+        r0 += "<label class=\"" + "lecture__comments__new__author-label form__label" + "\" for=\"" + "new_comment_author" + "\">" + "Ваше имя" + "</label>";
+        r0 += "<input class=\"" + "lecture__comments__new__author form__input-text" + "\" id=\"" + "new_comment_author" + "\" name=\"" + "author" + "\" type=\"" + "text" + "\" size=\"" + "30" + "\"/>";
+        r0 += "<input type=\"" + "hidden" + "\" id=\"" + "lecture_id" + "\" name=\"" + "lecture_id" + "\" value=\"" + nodeset2attrvalue( ( m.s(j7, c0) ) ) + "\"/>";
+        r0 += "<div class=\"" + "lecture__comments__new__submit button" + "\">" + "Отправить" + "</div>";
+        r0 += "</form>";
+        r0 += "<div class=\"" + "lecture__comments__container" + "\">";
+        var items0 = m.s(j8, c0);
+        for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
+            var c1 = items0[ i1 ];
+            r0 += "<div class=\"" + "comment" + "\">";
+            r0 += "<div class=\"" + "comment__text" + "\">" + nodeset2xml( ( selectNametest('text', c1, []) ) ) + "</div>";
+            r0 += "<div class=\"" + "comment__signature" + "\">";
+            r0 += "Написал ";
+            r0 += "<span class=\"" + "comment__signature__author-name" + "\">" + nodeset2xml( ( selectNametest('author', c1, []) ) ) + "</span>";
+            r0 += "</div>";
+            r0 += "</div>";
+        }
+        r0 += "</div>";
+        r0 += "</div>";
         r0 += "</div>";
 
         return r0;
