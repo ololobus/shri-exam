@@ -377,10 +377,12 @@ a, a:visited, a:hover{
 }
 .lecture__comments__new{
   display:none;
+  height:215px;
 }
 .lecture__comments__new__text{
   width:710px;
   margin-bottom:7px;
+  resize:none;
 }
 .lecture__comments__new__author{
   margin-left:10px;
@@ -389,6 +391,26 @@ a, a:visited, a:hover{
   float:right;
   margin-right:3px;
 }
+
+
+.comment{
+  margin-top:10px;
+  border:1px dashed #c8c7cc;
+  border-width:1px 0px 0px 0px;
+  padding:10px 0px;
+}
+.comment__text{
+  overflow-x:hidden;
+}
+.comment__signature{
+  overflow-x:hidden;
+  font-size:12px;
+  margin-top:5px;
+}
+.comment__signature__author-name{
+  font-weight:bold;
+}
+
 
 /* Social widgets */
 #vk_groups1, #vk_groups2{

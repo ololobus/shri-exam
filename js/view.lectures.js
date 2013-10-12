@@ -22,8 +22,10 @@ var LecturesView = Backbone.View.extend({
   },
   
   renderShow: function(id) {
-    var lecture = db.find("lectures", id);
+    var lecture = _(db.find("lectures", id)).clone();
     var lector = db.find("lectors", lecture.lector_id);
+    var comments = db.where("comments", { lecture_id: id });
+    lecture.comments = comments;
     this.$el.html(yr.run("lecture", { lecture: lecture, lector: lector }));
   },
   
@@ -32,7 +34,19 @@ var LecturesView = Backbone.View.extend({
   },
   
   submitComment: function() {
-    
+    var form = $(".lecture__comments__new.form");
+    var comment = {};
+    _(form.serializeArray()).each(function(param) {
+      comment[param.name] = param.value;
+    });
+    if (comment.author === "") {
+      comment.author = "anonymous"
+    }
+    if (comment.text !== "") {
+      db.insert("comments", comment);
+      $(".lecture__comments__container").append(yr.run("comment", comment));
+      form[0].reset();
+    };
   }
 
 });
