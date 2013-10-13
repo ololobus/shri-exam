@@ -1,15 +1,16 @@
 Router = Backbone.Router.extend({
   
   routes: {
-    "":             "about",
-    "about":        "about",
-    "social":       "social",
-    "students":     "students",
-    "students/:id": "student",
-    "lectors":      "lectors",
-    "lectors/:id":  "lector",
-    "lectures":     "lectures",
-    "lectures/:id": "lecture"
+    "":                   "about",
+    "about":              "about",
+    "social":             "social",
+    "students":           "students",
+    "students/:id":       "student",
+    "students/:id/edit":  "student_edit",
+    "lectors":            "lectors",
+    "lectors/:id":        "lector",
+    "lectures":           "lectures",
+    "lectures/:id":       "lecture"
   },
   
   about: function() {
@@ -30,6 +31,11 @@ Router = Backbone.Router.extend({
   student: function(id) {
     this.setMenuCurrent("students");
     App.StudentsView.renderShow(id);
+  },
+  
+  student_edit: function(id) {
+    this.setMenuCurrent("students");
+    App.StudentsView.renderEdit(id);
   },
   
   lectors: function() {
