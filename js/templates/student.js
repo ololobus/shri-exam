@@ -27,15 +27,19 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j3 = [ 0, 'last_name' ];
 
-    var j4 = [ 0, 'link_gihub' ];
+    var j4 = [ 0, 'id' ];
 
-    var j5 = [ 0, 'link_vk' ];
+    var j5 = [ 0, 'city' ];
 
-    var j6 = [ 0, 'link_facebook' ];
+    var j6 = [ 0, 'link_gihub' ];
 
-    var j7 = [ 0, 'link_yaru' ];
+    var j7 = [ 0, 'link_vk' ];
 
-    var j8 = [ 0, 'about' ];
+    var j8 = [ 0, 'link_facebook' ];
+
+    var j9 = [ 0, 'link_yaru' ];
+
+    var j10 = [ 0, 'about' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
@@ -46,7 +50,11 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<div class=\"" + "member-card__avatar" + "\">";
         r0 += "<img src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" class=\"" + "member-card__avatar__photo" + "\"/>";
         r0 += "</div>";
-        r0 += "<div class=\"" + "member-card__name" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</div>";
+        r0 += "<div class=\"" + "member-card__name" + "\">";
+        r0 += nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) );
+        r0 += "<a href=\"" + "#/students/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "/edit" + "\" class=\"" + "member-card__name__edit-button link" + "\">" + "edit" + "</a>";
+        r0 += "</div>";
+        r0 += "<div class=\"" + "member-card__city" + "\">" + nodeset2xml( ( selectNametest('city', c0, []) ) ) + "</div>";
         r0 += "<div class=\"" + "member-card__social-links" + "\">";
         if (!(cmpSN("", selectNametest('link_gihub', c0, [])))) {
             r0 += "<a href=\"" + nodeset2attrvalue( ( selectNametest('link_gihub', c0, []) ) ) + "\" class=\"" + "member-card__social-links__link" + "\" target=\"" + "_blank" + "\">";
