@@ -1,1 +1,4 @@
 .DS_Store
+*.yate.obj
+node_modules/
+tmp/

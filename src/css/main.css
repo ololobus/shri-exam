@@ -269,6 +269,7 @@ a, a:visited, a:hover{
 }
 .people-list__member__avatar__photo{
 /*  width:140px;*/
+  border-width:0px;
   min-height:100px;
   min-width:100px;
   max-height:200px;
