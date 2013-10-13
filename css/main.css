@@ -49,6 +49,7 @@ a, a:visited, a:hover{
 
 
 .button{
+  display:inline-block;
   background-color:#efeff4;
   border:0px;
   border-radius:0px;
@@ -60,6 +61,13 @@ a, a:visited, a:hover{
   background-color:#007aff;
   color:white;
 }
+.button_color_red{
+  background-color:rgb(255, 173, 173);
+}
+.button_color_red:hover{
+  background-color:red;
+  color:white;
+}
 
 
 .form{}
@@ -68,6 +76,16 @@ a, a:visited, a:hover{
   font-size:15px;
   outline:none;
   border:1px solid #c8c7cc;
+  border-radius:0px;
+}
+.form__textarea{
+  resize:none;
+}
+.form__label{
+  display:inline-block;
+}
+.form__input-group{
+  margin-top:15px;
 }
 
 
@@ -306,12 +324,25 @@ a, a:visited, a:hover{
   top:10px;
   font-size:22px;
 }
+.member-card__name__edit-button{
+  position:absolute;
+  font-size:12px;
+  top:-5px;
+  right:-21px;
+}
+.member-card__city{
+  position:absolute;
+  left:370px;
+  top:40px;
+  font-size:18px;
+}
 .member-card__social-links{
   position:absolute;
   left:370px;
-  top:50px;
+  top:70px;
 }
 .member-card__about{
+  white-space:pre-wrap;
   font-size:14px;
   margin-bottom:15px;
 }
@@ -409,6 +440,15 @@ a, a:visited, a:hover{
 }
 .comment__signature__author-name{
   font-weight:bold;
+}
+
+
+.student-form{}
+.student-form .form__label{
+  width:150px;
+}
+.student-form__submit{
+  margin-left:25px;
 }
 
 

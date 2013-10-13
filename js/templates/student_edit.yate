@@ -1,0 +1,53 @@
+module "student_edit"
+
+match / {
+  <form class="form student-form">
+    if .id && .id != "" {
+      <input type="hidden" id="student-id" value="{ .id }" />
+    }
+    <div class="form__input-group">
+      <label class="form__label" for="student-first_name">Имя</label>
+      <input class="form__input-text" id="student-first_name" name="first_name" value="{ .first_name }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-last_name">Фамилия</label>
+      <input class="form__input-text" id="student-last_name" name="last_name" value="{ .last_name }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-city">Город</label>
+      <input class="form__input-text" id="student-city" name="city" value="{ .city }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-about">О себе</label>
+      <textarea class="form__textarea" id="student-about" name="about" rows="7" cols="65">{ .about }</textarea>
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-link_photo">URL фото</label>
+      <input class="form__input-text" id="student-link_photo" name="link_photo" value="{ .link_photo }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-link_vk">VK</label>
+      <input class="form__input-text" id="student-link_vk" name="link_vk" value="{ .link_vk }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-link_facebook">facebook</label>
+      <input class="form__input-text" id="student-link_facebook" name="link_facebook" value="{ .link_facebook }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-link_gihub">GitHub</label>
+      <input class="form__input-text" id="student-link_gihub" name="link_gihub" value="{ .link_gihub }" />
+    </div>
+    <div class="form__input-group">
+      <label class="form__label" for="student-link_yaru">ya.ru</label>
+      <input class="form__input-text" id="student-link_yaru" name="link_yaru" value="{ .link_yaru }" />
+    </div>
+    <div class="form__input-group">
+      if .id && .id != "" {
+        <a href="#/students/{ .id }"><div class="student-form__cancel button button_color_red">Отменить</div></a>
+      } else {
+        <a href="#/students"><div class="student-form__cancel button">Отменить</div></a>
+      }
+      <div class="student-form__submit button">Сохранить</div>
+    </div>
+  </form>
+}
