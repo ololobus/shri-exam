@@ -143,7 +143,8 @@ db = {
       this.max_ids[table_name] += 1;
       item.id = this.max_ids[table_name];
       this.data[table_name].push(item);
-      return this.write();
+      this.write();
+      return item;
     };
   }
   

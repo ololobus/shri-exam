@@ -16,11 +16,20 @@ module.exports = function (grunt) {
         "<%=tgtDir%>/css",
         "<%=tgtDir%>/db",
         "<%=tgtDir%>/images",
-        "<%=tgtDir%>/index.html"
+        "<%=tgtDir%>/index.html",
+        "<%=tgtDir%>/test.html"
       ]
     },
 
     copy: {
+      html: {
+        files: [{
+          expand: true,
+          cwd: "<%=srcDir%>/",
+          src: ["test.html"],
+          dest: "<%=tgtDir%>/"
+        }]
+      },
       css: {
         files: [{
           expand: true,
@@ -57,7 +66,7 @@ module.exports = function (grunt) {
 
     cssmin: {
       css: {
-        src: "<%=srcDir%>/css/*",
+        src: "<%=srcDir%>/css/*.css",
         dest: "<%=tgtDir%>/css/application.css"
       }
     },
@@ -102,7 +111,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask("development", [
     "clean:target", "env:development", "preprocess:html",
-    "copy:css", "copy:js", "copy:img", "copy:db"
+    "copy:css", "copy:js", "copy:img", "copy:db", "copy:html"
   ]);
   grunt.registerTask("production", [
     "clean:target", "env:production", "preprocess:html",
